@@ -37,7 +37,9 @@ defmodule ForeignKey.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:ex_machina, git: "https://github.com/thoughtbot/ex_machina", ref: "a87b57f2ad54ca266141c21f4e7d71eed0e78b93"}
+    ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

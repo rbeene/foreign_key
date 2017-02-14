@@ -1,8 +1,8 @@
-defmodule ForeignKey.Parent do
+defmodule ForeignKey.Child do
   use ForeignKey.Web, :model
 
-  schema "parents" do
-    has_many :childs, ForeignKey.Child, foreign_key: :parent_id
+  schema "childs" do
+    belongs_to :parent, ForeignKey.Parent
     timestamps()
   end
 

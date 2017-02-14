@@ -1,8 +1,11 @@
-defmodule ForeignKey.Parent do
+defmodule ForeignKey.ChildCustom do
   use ForeignKey.Web, :model
 
-  schema "parents" do
-    has_many :childs, ForeignKey.Child, foreign_key: :parent_id
+  @primary_key {:child_custom_id, :id, autogenerate: true}
+  @derive {Phoenix.Param, key: :child_custom_id}
+
+  schema "child_customs" do
+    belongs_to :parent_custom, ForeignKey.ParentCustom
     timestamps()
   end
 

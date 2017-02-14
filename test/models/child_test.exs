@@ -11,6 +11,7 @@ defmodule ForeignKey.ChildTest do
     parent = insert(:parent)
     child = insert(:child, parent: parent)
 
+    assert child.parent == parent
     assert child.parent_id == parent.id
   end
 

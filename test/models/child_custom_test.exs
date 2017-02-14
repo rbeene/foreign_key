@@ -11,6 +11,7 @@ defmodule ForeignKey.ChildCustomTest do
     parent_custom = insert(:parent_custom)
     child_custom = insert(:child_custom, parent_custom: parent_custom)
 
+    assert child_custom.parent_custom == parent_custom
     assert child_custom.parent_custom_id == parent_custom.parent_custom_id
   end
 end
